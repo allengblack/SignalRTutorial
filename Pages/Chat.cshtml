@@ -28,7 +28,9 @@
             messagesList.appendChild(li);
         }
 
-    var connection = new signalR.HubConnection("/hubs/chat", { logger: signalR.LogLevel.Trance }, {});
+    var connection = new signalR.HubConnectionBuilder()
+    .withUrl("/hubs/chat")
+    .build();
 
         sendForm.addEventListener("submit", function(evt) {
             var message = messageTextBox.value;

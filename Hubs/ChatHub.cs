@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SignalRTutorial.Hubs
 {
-    [Authorize]
+    // [Authorize]
     public class ChatHub : Hub
     {
         public override async Task OnConnectedAsync()
